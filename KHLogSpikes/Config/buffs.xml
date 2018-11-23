@@ -1,0 +1,14 @@
+<configs>
+	<append xpath="/buffs">
+	<!-- putting a buff in so the game doesn't freak out. It appears to work -->
+	<buff name="trapDamage1Trigger" name_key="trapDamage1EffectName" description_key="trapDamage1EffectDesc" tooltip_key="trapDamage1EffectTooltip" icon="ui_game_symbol_critical" >
+			<damage_type value="bloodloss"/>
+			<stack_type value="replace"/>
+			<duration value="20"/>
+		
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="HealthChangeOT" target="self" operation="base_set" value="0.5"/>
+			</effect_group>
+	</buff>
+	</append>
+</configs>
